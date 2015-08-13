@@ -40,12 +40,13 @@ import org.apache.lucene.util.automaton.ByteRunAutomaton;
 import org.apache.lucene.util.automaton.CompiledAutomaton;
 import org.apache.lucene.util.automaton.LevenshteinAutomata;
 
-/** Subclass of TermsEnum for enumerating all terms that are similar
- * to the specified filter term.
+/**
  *
- * <p>Term enumerations are always ordered by
- * {@link BytesRef#compareTo}.  Each term in the enumeration is
- * greater than all that precede it.</p>
+ * TermsEnum的子类,为了列举与指定过滤term相似的所有terms
+ *
+ * <p>Term enumerations 总是按照{@link BytesRef#compareTo}排序.
+ * 在枚举器中的每一个term都比它前面都term大
+ * </p>
  */
 public class FuzzyTermsEnum extends TermsEnum {
   private TermsEnum actualEnum;
