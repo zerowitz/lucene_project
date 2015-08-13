@@ -43,13 +43,12 @@ import java.util.PriorityQueue;
 /**
  * Simple automaton-based spellchecker.
  * <p>
- * Candidates are presented directly from the term dictionary, based on
- * Levenshtein distance. This is an alternative to {@link SpellChecker}
+ * 候选的词直接来着与term dictionary词典, based on
+ * Levenshtein distance. 这是一个对{@link SpellChecker}来说备选的.
  * if you are using an edit-distance-like metric such as Levenshtein
  * or {@link JaroWinklerDistance}.
  * <p>
- * A practical benefit of this spellchecker is that it requires no additional
- * datastructures (neither in RAM nor on disk) to do its work.
+ * 这个spellchecker的部分好处:其工作是不需要额外的数据结构(不管是内存还是磁盘)
  * 
  * @see LevenshteinAutomata
  * @see FuzzyTermsEnum
