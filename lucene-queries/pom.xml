@@ -7,7 +7,7 @@
 	<version>5.2-YP-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>lucene</name>
+	<name>lucene-queries</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
