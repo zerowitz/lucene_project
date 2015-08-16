@@ -126,7 +126,7 @@ public class AnalyzingInfixSuggester extends Lookup implements Closeable {
   protected final Analyzer indexAnalyzer;
   private final Directory dir;
   final int minPrefixChars;
-  
+
   private final boolean allTermsRequired;
   private final boolean highlight;
   
