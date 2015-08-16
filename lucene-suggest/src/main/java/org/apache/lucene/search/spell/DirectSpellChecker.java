@@ -191,7 +191,7 @@ public class DirectSpellChecker {
   }
 
   /** 
-   * Set the minimum length of a query term (default: 4) needed to return suggestions. 
+   * 设置需要返回suggestions对应最小长度大query term(默认为4)
    * <p>
    * Very short query terms will often cause only bad suggestions with any distance
    * metric.

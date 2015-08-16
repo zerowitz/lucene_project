@@ -149,7 +149,7 @@ public class TestDirectSpellChecker extends LuceneTestCase {
     assertEquals(0, similar.length);
     
     spellChecker = new DirectSpellChecker(); // reset defaults
-    spellChecker.setMinQueryLength(5);
+    spellChecker.setMinQueryLength(4);
     similar = spellChecker.suggestSimilar(new Term("text", "foba"), 1, ir,
         SuggestMode.SUGGEST_MORE_POPULAR);
     assertEquals(0, similar.length);
