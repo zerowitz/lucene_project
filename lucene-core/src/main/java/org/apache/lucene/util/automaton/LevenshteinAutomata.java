@@ -103,7 +103,7 @@ public class LevenshteinAutomata {
         null, /* for n=0, we do not need to go through the trouble */
         withTranspositions ? new Lev1TParametricDescription(word.length) : new Lev1ParametricDescription(word.length),
         withTranspositions ? new Lev2TParametricDescription(word.length) : new Lev2ParametricDescription(word.length),
-    };
+    };                                                             
   }
   
   private static int[] codePoints(String input) {
