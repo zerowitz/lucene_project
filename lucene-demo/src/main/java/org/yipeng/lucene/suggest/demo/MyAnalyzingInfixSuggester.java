@@ -17,7 +17,7 @@ import org.yipeng.lucene.suggest.InputArrayIterator;
 /**
  * Created by yipeng on 15/8/16.
  */
-public class MySuggester {
+public class MyAnalyzingInfixSuggester {
 	public static void main(String[] args) throws IOException {
 		Input[] inputs = new Input[]{new Input("iphone6", 5299, new BytesRef("apple")),
 				new Input("iphone5s", 3299, new BytesRef("apple")),
@@ -40,6 +40,16 @@ public class MySuggester {
 		/**对于highlight可以修改{@link AnalyzingInfixSuggester#addPrefixMatch(StringBuilder, String, String, String)}
 		 * 方法,修改强调的字符串
 		 */
+		for(LookupResult result : results){
+			System.out.println(result.key+"  ,   " + result.value +"  ,  " + result.payload.toString() +" " + result.highlightKey);
+		}
+		
+		//测试NRT,增加一个新的Input
+		suggester.add(new BytesRef("iphone6plus"), null, 6088, new BytesRef("apple"));
+		
+		suggester.refresh(); //刷新一下
+		System.out.println("After refresh ! !");
+		results = suggester.lookup("ip", 10, true, true);
 		for(LookupResult result : results){
 			System.out.println(result.key+"  ,   " + result.value +"  ,  " + result.payload.toString() +" " + result.highlightKey);
 		}
